@@ -47,10 +47,16 @@ public class Power : MonoBehaviour
             player.ActivateSpecialShoot();
             
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && _currentPower>2){
+        if (Input.GetKeyDown(KeyCode.Alpha2) && _currentPower>3){
             _currentPower= _currentPower-4; 
             Player player = GetComponent<Player>();
             player.ActivateMultipleShoots(_numbullets);
+            
+        }
+         if (Input.GetKeyDown(KeyCode.Alpha3) && _currentPower>4){
+            _currentPower= _currentPower-5; 
+            Player player = GetComponent<Player>();
+            player.ActivateScatterShot();
             
         }
     }

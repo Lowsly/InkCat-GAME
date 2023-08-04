@@ -59,7 +59,7 @@ public GameObject splashEndPrefab, smallBulletPrefab;
 	void DestroyBullet(){
 		
 		GameObject splash = Instantiate (splashEndPrefab, transform.position, Quaternion.identity);
-		splash.transform.localScale *= 1.3f;
+		splash.transform.localScale *= 1.4f;
 		for (int i = 0; i < _bullets; i++)
 			{
 				var firedBullet = Instantiate(smallBulletPrefab,transform.position, Quaternion.Euler(new Vector3(0,0,transform.rotation.eulerAngles.z+currentAngle)));

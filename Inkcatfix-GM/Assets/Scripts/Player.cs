@@ -5,7 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	//Bullets
-	public GameObject bulletPrefab, splashPrefab, shooter, smallBulletPrefab;
+	public GameObject defaultBullet, splashPrefab, shooter, smallBulletPrefab, scatterPrefab;
+	private GameObject bulletPrefab;
 	private Transform _firePoint;
 
 	//Basic
@@ -56,6 +57,7 @@ public class Player : MonoBehaviour
 	private Vector2 mousePos;
 	void Awake()
 	{
+		bulletPrefab = defaultBullet;
 		_rigidbody = GetComponent<Rigidbody2D>();
 		_animator = GetComponent<Animator>();
 		_firePoint = transform.Find("FirePoint");
@@ -188,13 +190,13 @@ public class Player : MonoBehaviour
 			_isAttacking = false;
 		}
 		// Long Idle
-		if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Isidle")) 
+		if (_movement == Vector2.zero) 
 		{
 			_longIdleTimer += Time.deltaTime;
 
 			if (_longIdleTimer >= longIdleTime) 
 			{
-				_animator.SetTrigger("LongIdle");
+				_animator.SetTrigger("Longidle");
 			}
 		} 
 		else 
@@ -374,6 +376,16 @@ public class Player : MonoBehaviour
 	public IEnumerator MultipleShoot(){
 		yield return new WaitForSecondsRealtime(10);
 		_bullets = 1;
+
+	}
+
+	public void ActivateScatterShot(){
+		bulletPrefab = scatterPrefab;
+		StartCoroutine(ScatterShot());
+	}
+	public IEnumerator ScatterShot(){
+		yield return new WaitForSecondsRealtime(10);
+		bulletPrefab = defaultBullet;
 
 	}
 	
