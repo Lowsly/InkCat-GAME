@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [Header("Pause")]
@@ -26,5 +26,12 @@ public class UIManager : MonoBehaviour
         //If status == true pause | if status == false unpause.
         pauseScreen.SetActive(status);
     }
+
+    public void RestartGame(bool restart)
+    {
+        //If status == true pause | if status == false unpause.
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     #endregion
 }

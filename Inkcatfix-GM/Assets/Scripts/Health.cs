@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     public int health, numHearts;
@@ -136,6 +136,7 @@ public class Health : MonoBehaviour
                 Destroy(player);
                 hearts[0].sprite = emptyHeart;
                 Debug.Log("Sht");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             } 
         }
     }
