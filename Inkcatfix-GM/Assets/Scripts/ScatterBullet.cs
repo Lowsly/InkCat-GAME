@@ -12,26 +12,21 @@ public GameObject splashEndPrefab, smallBulletPrefab;
 	public float speed = 2f;
 	public Vector2 direction;
 	private Vector3 rot;
-	public float livingTime = 3f;
-	private Transform _angle;
-	private float angle;
+	public float livingTime = 3f, damage;
 	private SpriteRenderer _renderer;
-	private float _startingTime;
+	private float _startingTime, angleStep, currentAngle;
+	private int _bullets = 3;
 
 
 	void Awake()
 	{
 		_renderer = GetComponent<SpriteRenderer>();
-		_angle = GetComponent<Transform>();
         _rigidbody = GetComponent<Rigidbody2D>();
 	}
 
 	void Start()
     {
-		Health health = GetComponent<Health>();
-		_startingTime = Time.time;
-		Invoke ("DestroyBullet",0.5f);
-		
+		Invoke ("DestroyBullet",0.5f);	
 		
     }
 
@@ -40,6 +35,8 @@ public GameObject splashEndPrefab, smallBulletPrefab;
 		rot = new Vector3(0,0,transform.rotation.eulerAngles.z);
 		Vector2 movement = direction.normalized * speed * Time.deltaTime;
 		transform.Translate(movement);
+		angleStep = 90f/2 / (_bullets - 1); 
+		currentAngle = -45/2;
 		
 		_isTouching = Physics2D.OverlapCircle(transform.position, groundCheckRadius, groundLayer);
 		if (_isTouching == true){
@@ -49,23 +46,26 @@ public GameObject splashEndPrefab, smallBulletPrefab;
     }
 	void OnTriggerEnter2D(Collider2D collision)
     {
-            Health health = collision.GetComponent<Health>();
-            if (health != null)
-			{
-				health.Hit();
+           HealthEnemy health = collision.GetComponent<HealthEnemy>();
+			 if (health == null)
+    		{
+       			 return;
+   			 }
+			else{
+				health.TakeDamage(damage);
+            	DestroyBullet();
 			}
-            DestroyBullet();
     }
 	void DestroyBullet(){
 		
 		GameObject splash = Instantiate (splashEndPrefab, transform.position, Quaternion.identity);
 		splash.transform.localScale *= 1.3f;
-		GameObject bullet1 = Instantiate (smallBulletPrefab,transform.position,Quaternion.Euler(new Vector3(0,0,transform.rotation.eulerAngles.z+10)));
-		GameObject bullet2 = Instantiate (smallBulletPrefab,transform.position, Quaternion.Euler(new Vector3(0,0,transform.rotation.eulerAngles.z-10)));
-		GameObject bullet3 = Instantiate (smallBulletPrefab,transform.position, Quaternion.Euler(new Vector3(0,0,transform.rotation.eulerAngles.z)));
-		bullet1.transform.localScale *= 1.5f;
-		bullet2.transform.localScale *= 1.5f;
-		bullet3.transform.localScale *= 1.5f;
+		for (int i = 0; i < _bullets; i++)
+			{
+				var firedBullet = Instantiate(smallBulletPrefab,transform.position, Quaternion.Euler(new Vector3(0,0,transform.rotation.eulerAngles.z+currentAngle)));
+				firedBullet.transform.localScale *= 1.7f;
+				currentAngle += angleStep;
+			}
 		Destroy(this.gameObject);
 	}
 	void SummonExtra(){
