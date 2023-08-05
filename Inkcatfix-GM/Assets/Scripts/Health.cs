@@ -133,7 +133,6 @@ public class Health : MonoBehaviour
                 StartCoroutine(LowHealth());
             }
             if (health <= -1){
-                Destroy(player);
                 hearts[0].sprite = emptyHeart;
                 Debug.Log("Sht");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

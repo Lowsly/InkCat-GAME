@@ -1748,6 +1748,22 @@ PrefabInstance:
       propertyPath: powerBar
       value: 
       objectReference: {fileID: 671043937}
+    - target: {fileID: 8801876571137600721, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.20866108
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801876571137600721, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.48268852
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801876571137600721, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.040719032
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801876571137600721, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0723954
+      objectReference: {fileID: 0}
     - target: {fileID: 8801876571137600723, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: m_Name
       value: Player (1)
@@ -1811,7 +1827,7 @@ PrefabInstance:
     - target: {fileID: 8801876571137600726, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: defaultBullet
       value: 
-      objectReference: {fileID: 3112409723863472841, guid: df0438b67c47ee2429dcb8d70d8a3680, type: 3}
+      objectReference: {fileID: 3112409723863472841, guid: 194c1d8e476d81846ac165fe3ea18132, type: 3}
     - target: {fileID: 8801876571137600726, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: scatterPrefab
       value: 
@@ -4523,7 +4539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1705856629
 RectTransform:
   m_ObjectHideFlags: 0
