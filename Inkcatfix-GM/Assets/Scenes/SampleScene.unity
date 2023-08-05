@@ -3777,7 +3777,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476859640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
@@ -3792,13 +3792,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476859640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 1, g: 0.7854947, b: 0.02264148, a: 1}
-  m_EffectDistance: {x: -0.75, y: -5.73}
+  m_EffectDistance: {x: -1.53, y: -2.81}
   m_UseGraphicAlpha: 1
 --- !u!114 &1476859645
 MonoBehaviour:
@@ -3820,7 +3820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1663248481, guid: 62281c154c3760e409bb02bde223aca0, type: 3}
+  m_Sprite: {fileID: 1510165127, guid: b715a42369284a641acffce12eaae75a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
