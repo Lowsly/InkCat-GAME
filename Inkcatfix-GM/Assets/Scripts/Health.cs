@@ -9,11 +9,11 @@ public class Health : MonoBehaviour
 
     public GameObject player;
 
-    public Image[] hearts;
+    public Image hearts;
 
     public Image[] Ink;
 
-    public Sprite fullInk, emptyInk, fullInkJar,  dosInkJar, emptyInkJar, brokenInkJar, fullHeart, emptyHeart;
+    public Sprite fullInk, emptyInk, fullInkJar,  dosInkJar, emptyInkJar, brokenInkJar, OneHeart, fullBar, mediumBar, emptyBar;
 
     private Animator _animator;
 
@@ -35,25 +35,25 @@ public class Health : MonoBehaviour
     void Update()
     {
         
-        if(_inkUses < 0){
+        if(_inkUses < 0)
+        {
             _inkUses = 0;
         }
-        if(health > numHearts){
-            numHearts = health;
-        }
-        for (int i=0; i<hearts.Length;i++){
-            if(i<health){
-                hearts[i].sprite = fullHeart;
-            }
-            else {
-                 hearts[i].sprite = emptyHeart;
-            }
-            if(i < numHearts){
-                hearts[i].enabled = true;
-            }
-            else {
-                hearts[i].enabled = false;
-            }
+
+        switch (health)
+        {
+            case 0:
+                hearts.sprite = emptyBar;
+            break;
+            case 1:
+                hearts.sprite = OneHeart;
+            break;
+            case 2:
+                hearts.sprite = mediumBar;
+            break;
+            case 3:
+                hearts.sprite = fullBar;
+            break;
         }
         if (_noJar == false){
             if(_inkUses==1){
@@ -126,14 +126,16 @@ public class Health : MonoBehaviour
            
             StartCoroutine(Damaged());
             health = health - 1;
-             StartCoroutine(HeartColor());
+            if(health>0){
+                StartCoroutine(HeartColor());
+            }
+             
             
             if (health == 0){
                 _lowHealth = true;
                 StartCoroutine(LowHealth());
             }
             if (health <= -1){
-                hearts[0].sprite = emptyHeart;
                 Debug.Log("Sht");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             } 
@@ -183,15 +185,9 @@ public class Health : MonoBehaviour
 
     IEnumerator HeartColor()
     {
-        for (int i = 0; i<health; i++)
-        {
-            hearts[health].color = Color.red;
-        }
+            hearts.color = Color.red;
        yield return new WaitForSecondsRealtime(1f);
-       foreach (Image img in hearts)
-            {
-                img.color = Color.white;
-            }
+            hearts.color = Color.white;
     }
 
     IEnumerator Damaged()
@@ -218,17 +214,10 @@ public class Health : MonoBehaviour
     IEnumerator LowHealth() 
     {
         while (_lowHealth == true){
-            foreach (Image img in hearts)
-            {
-                img.color = Color.red;
-            }
+                hearts.color = Color.red;
             yield return new WaitForSecondsRealtime(0.45f);
-            foreach (Image img in hearts)
-            {
-                img.color = Color.white;
-            }
+                hearts.color = Color.white;
             yield return new WaitForSecondsRealtime(0.45f);
-            
         }
         yield return null;
     }
