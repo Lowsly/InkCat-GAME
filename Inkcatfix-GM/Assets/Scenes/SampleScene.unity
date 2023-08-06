@@ -1787,47 +1787,47 @@ PrefabInstance:
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[0]
       value: 
-      objectReference: {fileID: 1091489445, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: -2090570652, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[1]
       value: 
-      objectReference: {fileID: 107711457, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: 63642034, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[2]
       value: 
-      objectReference: {fileID: -1446892934, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: 1072818801, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[3]
       value: 
-      objectReference: {fileID: 1267360807, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: 1823638137, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[4]
       value: 
-      objectReference: {fileID: 1090946653, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: -1480919492, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[5]
       value: 
-      objectReference: {fileID: 360138413, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: 1106607823, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[6]
       value: 
-      objectReference: {fileID: 247937372, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: 42993820, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[7]
       value: 
-      objectReference: {fileID: -510290305, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: -1263941055, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[8]
       value: 
-      objectReference: {fileID: -1207912333, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: 1353448350, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[9]
       value: 
-      objectReference: {fileID: 435463507, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: 1011002590, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 1970739398, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: powerBarSprite.Array.data[10]
       value: 
-      objectReference: {fileID: -297055268, guid: b00e34cd687d074438f9bafd464cd14d, type: 3}
+      objectReference: {fileID: 1799100656, guid: 6b5f82b48f1df3b4e9f257e52a9a0399, type: 3}
     - target: {fileID: 8801876571137600721, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: m_Size.x
       value: 0.20866108
@@ -4619,7 +4619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1705856629
 RectTransform:
   m_ObjectHideFlags: 0
