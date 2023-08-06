@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 612e4f4f4f669494f95161a6c911e431
+guid: 6b5f82b48f1df3b4e9f257e52a9a0399
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,10 +120,10 @@ TextureImporter:
       name: power-bar_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 64
-        height: 64
+        x: 7
+        y: 230
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 903cb49cb5c69ac48b33d5b0dcb2ee4a
-      internalID: 1366066011
+      spriteID: 377b147071a79c244b65943900ea874d
+      internalID: -2090570652
       vertices: []
       indices: 
       edges: []
@@ -141,10 +141,10 @@ TextureImporter:
       name: power-bar_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
-        width: 64
-        height: 64
+        x: 71
+        y: 230
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eab46cd1ee656ac4bb5bd2f726b88ac0
-      internalID: -1303762459
+      spriteID: efeba712f456ee44d9ae1516a5598811
+      internalID: 63642034
       vertices: []
       indices: 
       edges: []
@@ -162,10 +162,10 @@ TextureImporter:
       name: power-bar_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
-        width: 64
-        height: 64
+        x: 135
+        y: 230
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 163ae515eb68bc74dacd5f97d85112dc
-      internalID: 1622078815
+      spriteID: fea191da2a70e6f4ab8b8181a3f01713
+      internalID: 1072818801
       vertices: []
       indices: 
       edges: []
@@ -183,10 +183,10 @@ TextureImporter:
       name: power-bar_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 64
-        height: 64
+        x: 199
+        y: 230
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8b7fcc039331e541b20b27f643f7feb
-      internalID: 1758756769
+      spriteID: 1fc6a246ab1b37e42b44f598caad372c
+      internalID: 1823638137
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
       name: power-bar_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
+        x: 7
+        y: 166
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0104fcf4104815048908f2c4d34b7d17
-      internalID: 444418684
+      spriteID: 3d4a90d3911c08744ada8f8367daa518
+      internalID: -1480919492
       vertices: []
       indices: 
       edges: []
@@ -225,10 +225,10 @@ TextureImporter:
       name: power-bar_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
+        x: 71
+        y: 166
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2681636fd9c55544cbe04f2b7e9182a6
-      internalID: 954325820
+      spriteID: 5b1a52411c4b2994187f4b0723a38489
+      internalID: 1106607823
       vertices: []
       indices: 
       edges: []
@@ -246,10 +246,10 @@ TextureImporter:
       name: power-bar_6
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
+        x: 135
+        y: 166
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,8 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6f5286e34ad59940a088c30fa86c9c2
-      internalID: 1663483119
+      spriteID: a60d05ae4084617498ddb20376548a06
+      internalID: 42993820
       vertices: []
       indices: 
       edges: []
@@ -267,10 +267,10 @@ TextureImporter:
       name: power-bar_7
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 64
+        x: 199
+        y: 166
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a1e1fdf5db554142807fb5d4ca33eb1
-      internalID: -2064653591
+      spriteID: 4b525c6aba8e1994d9904e2c78faf4a6
+      internalID: -1263941055
       vertices: []
       indices: 
       edges: []
@@ -288,10 +288,10 @@ TextureImporter:
       name: power-bar_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
+        x: 7
+        y: 102
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,8 +299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 831e329495d066646b0d7ab35e441cf6
-      internalID: 818869018
+      spriteID: 46d96033081791549a56cf91757bb0ce
+      internalID: 1353448350
       vertices: []
       indices: 
       edges: []
@@ -309,10 +309,10 @@ TextureImporter:
       name: power-bar_9
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 71
+        y: 102
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,8 +320,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eab0cc2569f96504f9af36cb6f198d92
-      internalID: 1723308069
+      spriteID: 9e02017d05fa2af4e98de157d807eb1a
+      internalID: 1011002590
       vertices: []
       indices: 
       edges: []
@@ -330,10 +330,10 @@ TextureImporter:
       name: power-bar_10
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
+        x: 135
+        y: 102
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,8 +341,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6a6786b657bf2b45825068adbc0121a
-      internalID: 1192275673
+      spriteID: 55bd2b1a0b838ce40aab500591f7bd91
+      internalID: 1799100656
       vertices: []
       indices: 
       edges: []
@@ -351,10 +351,10 @@ TextureImporter:
       name: power-bar_11
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
+        x: 199
+        y: 102
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,8 +362,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b505c5666bf8824d93be0c896fba68a
-      internalID: 1349197335
+      spriteID: dd60aefe44f760c42b5f11c6074da460
+      internalID: 192922143
       vertices: []
       indices: 
       edges: []
@@ -372,10 +372,10 @@ TextureImporter:
       name: power-bar_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 7
+        y: 38
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,8 +383,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2507c05b827d3941950e93a37ca5880
-      internalID: 1506415036
+      spriteID: 3025b7c8512fb044e8237a9d97f4b0e7
+      internalID: -1688544819
       vertices: []
       indices: 
       edges: []
@@ -393,10 +393,10 @@ TextureImporter:
       name: power-bar_13
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 71
+        y: 38
+        width: 51
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,8 +404,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baf4ff2f1d06c7244880fdc06d32eadf
-      internalID: -645438676
+      spriteID: 4936407f282268440a3c6e8759cfc409
+      internalID: 136348035
       vertices: []
       indices: 
       edges: []
@@ -414,10 +414,10 @@ TextureImporter:
       name: power-bar_14
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
+        x: 131
+        y: 34
+        width: 59
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,8 +425,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeb8a69b16f0e6141913a4cdf37478d5
-      internalID: 1411675393
+      spriteID: 17422c9d2c2841143a7a8ac81d86dc68
+      internalID: 2038635841
       vertices: []
       indices: 
       edges: []
@@ -435,10 +435,10 @@ TextureImporter:
       name: power-bar_15
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
+        x: 195
+        y: 34
+        width: 59
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,8 +446,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faf56bc0bda9dc443a601fb218d30140
-      internalID: -1448599106
+      spriteID: 20852b640f4aab7449bf7021c5994ad3
+      internalID: 1541627298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-bar_16
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 18
+        width: 59
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51c843414f245a47847c2fdd663f423
+      internalID: -1324758883
       vertices: []
       indices: 
       edges: []
@@ -463,22 +484,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      power-bar_0: 1366066011
-      power-bar_13: -645438676
-      power-bar_3: 1758756769
-      power-bar_9: 1723308069
-      power-bar_11: 1349197335
-      power-bar_10: 1192275673
-      power-bar_1: -1303762459
-      power-bar_5: 954325820
-      power-bar_12: 1506415036
-      power-bar_14: 1411675393
-      power-bar_8: 818869018
-      power-bar_6: 1663483119
-      power-bar_15: -1448599106
-      power-bar_7: -2064653591
-      power-bar_2: 1622078815
-      power-bar_4: 444418684
+      power-bar_0: -2090570652
+      power-bar_13: 136348035
+      power-bar_3: 1823638137
+      power-bar_9: 1011002590
+      power-bar_11: 192922143
+      power-bar_10: 1799100656
+      power-bar_1: 63642034
+      power-bar_5: 1106607823
+      power-bar_12: -1688544819
+      power-bar_14: 2038635841
+      power-bar_8: 1353448350
+      power-bar_16: -1324758883
+      power-bar_6: 42993820
+      power-bar_15: 1541627298
+      power-bar_7: -1263941055
+      power-bar_2: 1072818801
+      power-bar_4: -1480919492
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

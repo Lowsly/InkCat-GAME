@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb127991f79c7ba4dbdd33ba249f3f91
+guid: ec05260e69afd1449849efefad522fd5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ShootsIcon 1_0
+      name: life (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0258ac22cdf1a748a9fd1dbf7c396b0
-      internalID: 1587026409
+      spriteID: 810ed0e40f849c547bc22f5be35a8849
+      internalID: -1100306259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootsIcon 1_1
+      name: life (1)_1
       rect:
         serializedVersion: 2
         x: 64
@@ -152,14 +152,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa9b0ac4e21af3b40afb9902805a8a72
-      internalID: 1809766788
+      spriteID: bb1337ecbb1a60445b97956c64b1e5c6
+      internalID: 1857902347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootsIcon 1_2
+      name: life (1)_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bafcc515ef7c5439a9df5f2a8a963d
+      internalID: 270083093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life (1)_3
       rect:
         serializedVersion: 2
         x: 0
@@ -173,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c802b8f2466cfb489a5ee836539a249
-      internalID: -478118366
+      spriteID: 078b43e381c50654889f42d583695009
+      internalID: -966482376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootsIcon 1_3
+      name: life (1)_4
       rect:
         serializedVersion: 2
         x: 64
@@ -194,14 +215,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f9f17875e1d7564795d5e15c6a2c6b7
-      internalID: -772282104
+      spriteID: 1de8ddc3207886a42a4905f49fe8be86
+      internalID: -339769980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootsIcon 1_4
+      name: life (1)_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd9707be147d01488b4c184b03ac068
+      internalID: 1982392433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life (1)_6
       rect:
         serializedVersion: 2
         x: 0
@@ -215,8 +257,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0a9ed19e8332d944a4ce4ded74a89a1
-      internalID: -867448155
+      spriteID: dd0b2cfdedcb0fb4ab3e96d30e9d7b55
+      internalID: 703517293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life (1)_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875a7a197b88c854396ff8aeb4dbd164
+      internalID: -729769605
       vertices: []
       indices: 
       edges: []
@@ -232,11 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ShootsIcon 1_1: 1809766788
-      ShootsIcon 1_4: -867448155
-      ShootsIcon 1_2: -478118366
-      ShootsIcon 1_3: -772282104
-      ShootsIcon 1_0: 1587026409
+      life (1)_7: -729769605
+      life (1)_0: -1100306259
+      life (1)_4: -339769980
+      life (1)_1: 1857902347
+      life (1)_2: 270083093
+      life (1)_3: -966482376
+      life (1)_5: 1982392433
+      life (1)_6: 703517293
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

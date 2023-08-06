@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2bbe0e381583b8441b20361a97bcf45f
+guid: b00e34cd687d074438f9bafd464cd14d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,7 +117,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: life_0
+      name: power-bar (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a100a75473d3c63448d7edae4c78fe91
+      internalID: 1091489445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-bar (1)_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deac851c2ebfe09428ce40008e3bc72c
+      internalID: 107711457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-bar (1)_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff53db78d19c64a4d8242b735a40e216
+      internalID: -1446892934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-bar (1)_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ab0fd9b3a177a46a800d31b1a82709
+      internalID: 1267360807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-bar (1)_4
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ada05f728abf224b80c1214f544cdb6
-      internalID: -1858271977
+      spriteID: f6fcd6862a5227c40bf7e4b14405f7b4
+      internalID: 1090946653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life_1
+      name: power-bar (1)_5
       rect:
         serializedVersion: 2
         x: 64
@@ -152,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf111bad13ba6f54d90e47b76802ced2
-      internalID: 397591593
+      spriteID: 9de0b5bedc631f1469965fe7b88dd952
+      internalID: 360138413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life_2
+      name: power-bar (1)_6
       rect:
         serializedVersion: 2
         x: 128
@@ -173,14 +257,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f41743aa82c4cb348a62595259fb2499
-      internalID: 1752553678
+      spriteID: dff5d3c1a2997c14bb65a00b0a6c4bf2
+      internalID: 247937372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life_3
+      name: power-bar (1)_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aecbec3a25745d145b7ed6cce7b5677e
+      internalID: -510290305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-bar (1)_8
       rect:
         serializedVersion: 2
         x: 0
@@ -194,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54f29cd9dcd126440a424ac1d7cf09dc
-      internalID: 915606961
+      spriteID: a94958fa0cb52d54cafc51f4df7e62a5
+      internalID: -1207912333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life_4
+      name: power-bar (1)_9
       rect:
         serializedVersion: 2
         x: 64
@@ -215,14 +320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f45c36ebde55574aa93cb83ba2c4422
-      internalID: -958574048
+      spriteID: 280a52904abd95f469d5fd703ae72770
+      internalID: 435463507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life_5
+      name: power-bar (1)_10
       rect:
         serializedVersion: 2
         x: 128
@@ -236,14 +341,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8870ce0ba28625f4398ecd57d3d14446
-      internalID: -512069880
+      spriteID: ea65c0547b65a96478f42a85e310c6ad
+      internalID: -297055268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life_6
+      name: power-bar (1)_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b19db62e56a384f874a64522deebac
+      internalID: -1320960707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-bar (1)_12
       rect:
         serializedVersion: 2
         x: 0
@@ -257,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 927809986e83e5a45b1ee33e37170da5
-      internalID: -1686768119
+      spriteID: 1abd53ad990610246a6478523d44b2ca
+      internalID: 1049599433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life_7
+      name: power-bar (1)_13
       rect:
         serializedVersion: 2
         x: 64
@@ -278,8 +404,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 090866ddaad93aa4399bcf06c3b1d09c
-      internalID: 186440721
+      spriteID: 2432a31b416a4c24e814ee9af42ac89f
+      internalID: -961123753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-bar (1)_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9adf4c9828cb044bef28901fdba66e
+      internalID: 1233941194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: power-bar (1)_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308a4ed84e3e38e40834865c5d2ca834
+      internalID: 884315758
       vertices: []
       indices: 
       edges: []
@@ -295,14 +463,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      life_6: -1686768119
-      life_4: -958574048
-      life_3: 915606961
-      life_7: 186440721
-      life_2: 1752553678
-      life_1: 397591593
-      life_0: -1858271977
-      life_5: -512069880
+      power-bar (1)_15: 884315758
+      power-bar (1)_10: -297055268
+      power-bar (1)_7: -510290305
+      power-bar (1)_11: -1320960707
+      power-bar (1)_5: 360138413
+      power-bar (1)_4: 1090946653
+      power-bar (1)_3: 1267360807
+      power-bar (1)_13: -961123753
+      power-bar (1)_6: 247937372
+      power-bar (1)_12: 1049599433
+      power-bar (1)_2: -1446892934
+      power-bar (1)_0: 1091489445
+      power-bar (1)_8: -1207912333
+      power-bar (1)_14: 1233941194
+      power-bar (1)_1: 107711457
+      power-bar (1)_9: 435463507
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
