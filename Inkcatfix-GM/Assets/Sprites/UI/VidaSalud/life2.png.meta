@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 82519bdc60ab797469872379fa9aa8d1
+guid: 011ebf83986204146af4ad3f4795608a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,6 +121,90 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 225
+        width: 130
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7c99b462f5412489dc52ddcb77d363
+      internalID: 1363921644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life2_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 225
+        width: 130
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027fb4a5d3cbcb14880ebc8371292ca1
+      internalID: 2109079210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life2_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 130
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b41ae2b46503e04687326074c71907b
+      internalID: 721964992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life2_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 180
+        width: 130
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48c9a1c1574f174a8daa2bd2a7a9464
+      internalID: 2038438267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life2_4
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 135
         width: 130
         height: 45
@@ -131,14 +215,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dc1ab97d9e5c9847802bc447236a5a0
-      internalID: -826587976
+      spriteID: 5b2ac5b6cf1449444a4562a650ab4828
+      internalID: -69200404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life2_1
+      name: life2_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 135
+        width: 130
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b82ec85a572ede44982dd34bc8d3a94
+      internalID: -141175299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life2_6
       rect:
         serializedVersion: 2
         x: 0
@@ -152,14 +257,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73685a00db0008349afb58a5abdb9284
-      internalID: -1609256495
+      spriteID: 2fd6eeec3a8401b41b94224823327177
+      internalID: 1416002214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life2_2
+      name: life2_7
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 90
+        width: 130
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188f25a47f8f6c5409db6b61bb1f2f3e
+      internalID: 769848065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life2_8
       rect:
         serializedVersion: 2
         x: 0
@@ -173,14 +299,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d13c2c0d28e4f054ea1027ffbf230b50
-      internalID: -2109265242
+      spriteID: a31917b3b428a64469403f3d65b49346
+      internalID: -1551299839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life2_3
+      name: life2_9
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 45
+        width: 130
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a76fdd63f8444d4eab3a16ccc2c6b6b
+      internalID: 199669964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life2_10
       rect:
         serializedVersion: 2
         x: 0
@@ -194,8 +341,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 201fe268b4f223b4484916b9ac15c4f7
-      internalID: -2123359473
+      spriteID: 4458048cfd78fb140a1d55b06bdb757b
+      internalID: -1342949003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: life2_11
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17cb720738ebdf4aae1d270b4091afe
+      internalID: -770674108
       vertices: []
       indices: 
       edges: []
@@ -211,10 +379,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      life2_3: -2123359473
-      life2_2: -2109265242
-      life2_1: -1609256495
-      life2_0: -826587976
+      life2_4: -69200404
+      life2_10: -1342949003
+      life2_8: -1551299839
+      life2_11: -770674108
+      life2_9: 199669964
+      life2_5: -141175299
+      life2_6: 1416002214
+      life2_3: 2038438267
+      life2_2: 721964992
+      life2_1: 2109079210
+      life2_7: 769848065
+      life2_0: 1363921644
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

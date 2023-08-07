@@ -9,11 +9,9 @@ public class Health : MonoBehaviour
 
     public GameObject player;
 
-    public Image hearts;
+    public Image hearts, Ink;
 
-    public Image[] Ink;
-
-    public Sprite fullInk, emptyInk, fullInkJar,  dosInkJar, emptyInkJar, brokenInkJar, OneHeart, fullBar, mediumBar, emptyBar;
+    public Sprite Ink5Uses,Ink4Uses, Ink3Uses, Ink2Uses, Ink1Uses,InkBroken0, InkBroken1, InkBroken2,OneHeart, fullBar, mediumBar, emptyBar;
 
     private Animator _animator;
 
@@ -63,36 +61,25 @@ public class Health : MonoBehaviour
                 _uniqueJarBreak = false;
             }
             if(_inkUses < 1){
-                Ink[2].sprite = emptyInk;
-                Ink[1].sprite = emptyInk;
+                Ink.sprite = InkBroken0;
                 
                 _noJar = true;
                 
             }
             if(_inkUses == 1){
-                Ink[2].sprite = emptyInk;
-                Ink[1].sprite = emptyInk;
-                Ink[0].sprite = emptyInkJar;
+                Ink.sprite = Ink1Uses;
             }
             if(_inkUses == 2){
-                Ink[2].sprite = emptyInk;
-                Ink[1].sprite = emptyInk;
-                Ink[0].sprite = dosInkJar;
+                Ink.sprite = Ink2Uses;
             }
             if(_inkUses == 3){
-                Ink[2].sprite = emptyInk;
-                Ink[1].sprite = emptyInk;
-                Ink[0].sprite = fullInkJar;
+                Ink.sprite = Ink3Uses;
             }
             if(_inkUses == 4){
-                Ink[2].sprite = emptyInk;
-                Ink[1].sprite = fullInk;
-                Ink[0].sprite = fullInkJar;
+                Ink.sprite = Ink4Uses;
             }
             if(_inkUses == 5){
-                Ink[2].sprite = fullInk;
-                Ink[1].sprite = fullInk;
-                Ink[0].sprite = fullInkJar;
+                Ink.sprite = Ink5Uses;
             }
         }
         if (_noJar == true) {
@@ -102,19 +89,13 @@ public class Health : MonoBehaviour
                 _inkUses = 2;
             }
             if(_inkUses == 2){
-                Ink[2].sprite = fullInk;
-                Ink[1].sprite = fullInk;
-                Ink[0].sprite = brokenInkJar;
+                Ink.sprite = InkBroken2;
             }
              if(_inkUses == 1){
-                Ink[2].sprite = emptyInk;
-                Ink[1].sprite = fullInk;
-                Ink[0].sprite = brokenInkJar;
+                Ink.sprite = InkBroken1;
             }
             if(_inkUses == 0){
-                Ink[2].sprite = emptyInk;
-                Ink[1].sprite = emptyInk;
-                Ink[0].sprite = brokenInkJar;
+                Ink.sprite = InkBroken0;
             }
         }
     }
@@ -150,7 +131,6 @@ public class Health : MonoBehaviour
             }
             if (horizontalInput == 0 && _uniqueJarBreak == true){
                     _animator.SetTrigger("HealBreak");
-                    Ink[0].sprite = brokenInkJar;
                     _uniqueJarBreak = false;
                 }
             if (horizontalInput != 0 && _uniqueJarBreak == false){
@@ -158,7 +138,6 @@ public class Health : MonoBehaviour
             }
              if (horizontalInput != 0 && _uniqueJarBreak == true){
                 _animator.SetTrigger("HealWalkBreak");
-                Ink[0].sprite = brokenInkJar;
                 _uniqueJarBreak = false;
             }
            
