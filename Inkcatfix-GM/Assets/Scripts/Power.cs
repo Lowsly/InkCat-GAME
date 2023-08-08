@@ -5,21 +5,29 @@ using UnityEngine.UI;
 
 public class Power : MonoBehaviour
 {
-    public Image powerBar;
+    public Image powerBar, CD1;
 
     public Sprite[] powerBarSprite;
 
+    public GameObject _Player;
+
+    Player player;
+
     private int _maxPower=11, _currentPower, _numbullets = 2;
 
+    public float speed, currentValue = 100; 
     
-    void Start()
+    void Awake()
     {
-        
+        player = _Player.GetComponent<Player>();
     }
 
     
     void Update()
     {
+
+        currentValue-= speed * Time.deltaTime;
+        CD1.fillAmount = currentValue / 100;
         for(int i=0; i<_currentPower+1;i++){
             powerBar.sprite = powerBarSprite[i];
         }
@@ -43,19 +51,16 @@ public class Power : MonoBehaviour
                 }
         if (Input.GetKeyDown(KeyCode.Alpha1) && _currentPower>2){
             _currentPower= _currentPower-3; 
-            Player player = GetComponent<Player>();
             player.ActivateSpecialShoot();
             
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && _currentPower>3){
             _currentPower= _currentPower-4; 
-            Player player = GetComponent<Player>();
             player.ActivateMultipleShoots(_numbullets);
             
         }
          if (Input.GetKeyDown(KeyCode.Alpha3) && _currentPower>4){
             _currentPower= _currentPower-5; 
-            Player player = GetComponent<Player>();
             player.ActivateScatterShot();
             
         }
