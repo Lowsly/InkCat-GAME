@@ -118,7 +118,8 @@ public class Health : MonoBehaviour
             }
             if (health <= -1){
                 Debug.Log("Sht");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+               _animator.SetTrigger("Death");
+               Invoke ("Death",0.6f);
             } 
         }
     }
@@ -144,6 +145,12 @@ public class Health : MonoBehaviour
         }
     }
 
+    private void Death()
+    {
+        Destroy(gameObject);
+        
+    }
+
     public void Healed()
     {
         _lowHealth = false;
@@ -165,7 +172,7 @@ public class Health : MonoBehaviour
     IEnumerator HeartColor()
     {
             hearts.color = Color.red;
-       yield return new WaitForSecondsRealtime(1f);
+       yield return new WaitForSeconds(1f);
             hearts.color = Color.white;
     }
 
@@ -174,9 +181,9 @@ public class Health : MonoBehaviour
         for (int i = 0; i < 6; i++)
             {
              _renderer.color = new Color (0, 0, 0, 0f);
-             yield return new WaitForSecondsRealtime(.1f);
+             yield return new WaitForSeconds(.1f);
              _renderer.color = Color.white;
-             yield return new WaitForSecondsRealtime(.1f);
+             yield return new WaitForSeconds(.1f);
             }
         
     }
@@ -186,7 +193,7 @@ public class Health : MonoBehaviour
         Player player = GetComponent<Player>();
         _isImmune = true;
         player.IsStunned(_isImmune);
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSeconds(1f);
         _isImmune = false;
         player.IsStunned(_isImmune);
     }
@@ -194,9 +201,9 @@ public class Health : MonoBehaviour
     {
         while (_lowHealth == true){
                 hearts.color = Color.red;
-            yield return new WaitForSecondsRealtime(0.45f);
+            yield return new WaitForSeconds(0.45f);
                 hearts.color = Color.white;
-            yield return new WaitForSecondsRealtime(0.45f);
+            yield return new WaitForSeconds(0.45f);
         }
         yield return null;
     }

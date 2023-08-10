@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
 		}
 		horizontalInput = Input.GetAxisRaw("Horizontal");
 		verticalInput = Input.GetAxisRaw("Vertical");
-		if (_stunned == false)
+		if (_stunned == false && Time.timeScale!= 0)
 		{
 			dirX = Input.GetAxis ("Horizontal");
 			_movement = new Vector2(horizontalInput, 0f);
@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
 	}
 	void FixedUpdate()
 	{		
-		if(_stunned == false ){
+		if(_stunned == false && Time.timeScale!= 0){
 			float horizontalVelocity = _movement.normalized.x * speed;
 			_rigidbody.velocity = new Vector2(horizontalVelocity, _rigidbody.velocity.y);
 			if (Input.GetButton("Fire1") && Time.time > _cdShoot && Input.GetButton("Fire2") == false ) 
@@ -241,7 +241,7 @@ public class Player : MonoBehaviour
 			
 			_stunned = true;
 		}
-		yield return new WaitForSecondsRealtime(0.5f);
+		yield return new WaitForSeconds(0.5f);
 		_stunned = false;
     }
 
@@ -365,7 +365,7 @@ public class Player : MonoBehaviour
 	}
 	public IEnumerator SpecialShoot(){
 		_specialShoot = true;
-		yield return new WaitForSecondsRealtime(10);
+		yield return new WaitForSeconds(10);
 		_specialShoot = false;
 
 	}
@@ -374,7 +374,7 @@ public class Player : MonoBehaviour
 		StartCoroutine(MultipleShoot());
 	}
 	public IEnumerator MultipleShoot(){
-		yield return new WaitForSecondsRealtime(10);
+		yield return new WaitForSeconds(10);
 		_bullets = 1;
 
 	}
@@ -384,7 +384,7 @@ public class Player : MonoBehaviour
 		StartCoroutine(ScatterShot());
 	}
 	public IEnumerator ScatterShot(){
-		yield return new WaitForSecondsRealtime(10);
+		yield return new WaitForSeconds(10);
 		bulletPrefab = defaultBullet;
 
 	}

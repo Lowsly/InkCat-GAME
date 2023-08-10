@@ -52,8 +52,12 @@ public GameObject splashEndPrefab;
 	void OnTriggerEnter2D(Collider2D collision)
     {
             Health health = collision.GetComponent<Health>();
-            health.Hit();
-            DestroyBullet();
+			if (health == null)
+				return;
+			else{
+				health.Hit();
+            	DestroyBullet();
+			}
     }
 	void DestroyBullet(){
 		Instantiate (splashEndPrefab, transform.position, Quaternion.identity);
