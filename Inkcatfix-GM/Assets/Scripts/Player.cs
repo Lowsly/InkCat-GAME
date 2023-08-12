@@ -45,7 +45,9 @@ public class Player : MonoBehaviour
 	public int _bullets=1;
 	private float horizontalInput, verticalInput, _angles, _halfangle, angleStep, currentAngle;
 	//heal 
-	private bool _stunned = false, _rightSided, _leftSided, _side, _specialShoot;
+	private bool  _rightSided, _leftSided, _side, _specialShoot;
+
+	public static bool _stunned;
 
 	//facing
 	float dirX, dirXx;
@@ -61,7 +63,7 @@ public class Player : MonoBehaviour
 		_rigidbody = GetComponent<Rigidbody2D>();
 		_animator = GetComponent<Animator>();
 		_firePoint = transform.Find("FirePoint");
-		
+		_stunned = false;
 		
 	}
 
@@ -69,8 +71,7 @@ public class Player : MonoBehaviour
     {
 		health = GetComponent<Health>();
        
-	   localScale = transform.localScale;
-	  
+	   localScale = transform.localScale;	  
 	
     }
 
@@ -89,7 +90,7 @@ public class Player : MonoBehaviour
 		}
 		horizontalInput = Input.GetAxisRaw("Horizontal");
 		verticalInput = Input.GetAxisRaw("Vertical");
-		if (_stunned == false && Time.timeScale!= 0)
+		if (_stunned == false && Time.timeScale!= 0 && Health._Death == false)
 		{
 			dirX = Input.GetAxis ("Horizontal");
 			_movement = new Vector2(horizontalInput, 0f);
@@ -117,7 +118,7 @@ public class Player : MonoBehaviour
 	}
 	void FixedUpdate()
 	{		
-		if(_stunned == false && Time.timeScale!= 0){
+		if(_stunned == false && Time.timeScale!= 0  && Health._Death == false){
 			float horizontalVelocity = _movement.normalized.x * speed;
 			_rigidbody.velocity = new Vector2(horizontalVelocity, _rigidbody.velocity.y);
 			if (Input.GetButton("Fire1") && Time.time > _cdShoot && Input.GetButton("Fire2") == false ) 
@@ -237,7 +238,9 @@ public class Player : MonoBehaviour
 			}
 			_animator.SetTrigger("Stunned");
 			
+			if(Health.health>-1){
 				_rigidbody.velocity = new Vector2((-1*dirX*dirXx)/1.45f, _rigidbody.velocity.y);
+			}
 			
 			_stunned = true;
 		}
@@ -245,6 +248,12 @@ public class Player : MonoBehaviour
 		_stunned = false;
     }
 
+	public void Death()
+	{
+		_rigidbody.velocity = new Vector2(0,0);
+		_rigidbody.gravityScale = 0;
+
+	}
 	private void Flip()
 	{	
 		if (dirX > 0)

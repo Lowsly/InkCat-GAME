@@ -25,7 +25,7 @@ public class Power : MonoBehaviour
     
     void Update()
     {
-        if(Time.timeScale!=0){
+        if(Time.timeScale!=0 && Health._Death == false){
             currentValue-= speed * Time.deltaTime;
             CD1.fillAmount = currentValue / 100;
             for(int i=0; i<_currentPower+1;i++){

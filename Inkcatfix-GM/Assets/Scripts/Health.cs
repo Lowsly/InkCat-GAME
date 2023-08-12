@@ -5,8 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
-    public int health, numHearts;
-
     public GameObject player;
 
     public Image hearts, Ink;
@@ -17,7 +15,7 @@ public class Health : MonoBehaviour
 
     public Color dmgColor, originalColor;
     
-    private bool _noJar, _isImmune, _lowHealth, _uniqueJarBreak;
+    private bool _noJar, _isImmune, _lowHealth, _uniqueJarBreak, _isDead;
 
     private int _maxInk = 5,_inkUses = 5;
 
@@ -25,7 +23,17 @@ public class Health : MonoBehaviour
 
     private float colorTime, colorTime2, colorTime3; 
 
-    
+    [SerializeField] private GameObject _heart, _heartBreak;
+
+    static public bool _Death, _Immune;
+
+    static public int health;
+
+    void Awake(){
+        _Death = false;
+        _Immune = false;
+        health = 3;
+    }
      void Start(){
         _animator = GetComponent<Animator>();
         _renderer = GetComponent<SpriteRenderer>();
@@ -102,30 +110,30 @@ public class Health : MonoBehaviour
     public void Hit()
     {   
         
-        if (_isImmune == false){
+        if (_Immune == false){
             StartCoroutine(Immune());
-           
-            StartCoroutine(Damaged());
             health = health - 1;
-            if(health>0){
+            if(health>0)
                 StartCoroutine(HeartColor());
-            }
-             
-            
-            if (health == 0){
+            if(health>-1)
+                StartCoroutine(Damaged());
+            if (health == 0)
                 _lowHealth = true;
                 StartCoroutine(LowHealth());
-            }
             if (health <= -1){
                 Debug.Log("Sht");
                _animator.SetTrigger("Death");
-               Invoke ("Death",0.6f);
+               _heart.SetActive(false);
+               _heartBreak.SetActive(true);
+               _Death = true;
+                Player player = GetComponent<Player>();
+               player.Death();
             } 
         }
     }
     public void Heal()
     {
-        if (_inkUses > 0){
+        if (_inkUses > 0 && _Death == false){
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             if (horizontalInput == 0 && _uniqueJarBreak == false){
                 _animator.SetTrigger("Heal");
@@ -143,12 +151,6 @@ public class Health : MonoBehaviour
             }
            
         }
-    }
-
-    private void Death()
-    {
-        Destroy(gameObject);
-        
     }
 
     public void Healed()
@@ -180,9 +182,9 @@ public class Health : MonoBehaviour
     {
         for (int i = 0; i < 6; i++)
             {
-             _renderer.color = new Color (0, 0, 0, 0f);
+             _renderer.enabled = false;
              yield return new WaitForSeconds(.1f);
-             _renderer.color = Color.white;
+             _renderer.enabled = true;
              yield return new WaitForSeconds(.1f);
             }
         
@@ -191,11 +193,10 @@ public class Health : MonoBehaviour
     IEnumerator Immune() 
     {
         Player player = GetComponent<Player>();
-        _isImmune = true;
-        player.IsStunned(_isImmune);
+        _Immune = true;
+        player.StartCoroutine(player.Stunned());
         yield return new WaitForSeconds(1f);
-        _isImmune = false;
-        player.IsStunned(_isImmune);
+        _Immune = false;
     }
     IEnumerator LowHealth() 
     {
