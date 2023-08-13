@@ -5,13 +5,13 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject player, barraTinta;
 
     public Image hearts, Ink;
 
-    public Sprite Ink5Uses,Ink4Uses, Ink3Uses, Ink2Uses, Ink1Uses,InkBroken0, InkBroken1, InkBroken2,OneHeart, fullBar, mediumBar, emptyBar;
+    public Sprite Ink5Uses, Ink45Uses, Ink4Uses, Ink35Uses, Ink3Uses, Ink2Uses, Ink1Uses,InkBroken0,InkBroken05, InkBroken1, InkBroken15, InkBroken2,OneHeart, fullBar, mediumBar, emptyBar;
 
-    private Animator _animator;
+    private Animator _animator, _barraAnimator;
 
     public Color dmgColor, originalColor;
     
@@ -35,7 +35,8 @@ public class Health : MonoBehaviour
         health = 3;
     }
      void Start(){
-        _animator = GetComponent<Animator>();
+        _animator = player.GetComponent<Animator>();
+        _barraAnimator = barraTinta.GetComponent<Animator>();
         _renderer = GetComponent<SpriteRenderer>();
     }
     void Update()
@@ -62,6 +63,8 @@ public class Health : MonoBehaviour
             break;
         }
         if (_noJar == false){
+             _barraAnimator.SetInteger("State", _inkUses);
+                
             if(_inkUses==1){
                  _uniqueJarBreak = true;
             }
@@ -72,7 +75,7 @@ public class Health : MonoBehaviour
                 Ink.sprite = InkBroken0;
                 
                 _noJar = true;
-                
+                 _barraAnimator.SetInteger("State", _inkUses+10);
             }
             if(_inkUses == 1){
                 Ink.sprite = Ink1Uses;
@@ -91,7 +94,7 @@ public class Health : MonoBehaviour
             }
         }
         if (_noJar == true) {
-            
+             _barraAnimator.SetInteger("State", _inkUses+10);
             _maxInk = 2;
             if (_inkUses > 2){
                 _inkUses = 2;
@@ -106,7 +109,9 @@ public class Health : MonoBehaviour
                 Ink.sprite = InkBroken0;
             }
         }
+         
     }
+    
     public void Hit()
     {   
         
@@ -133,6 +138,7 @@ public class Health : MonoBehaviour
     }
     public void Heal()
     {
+        
         if (_inkUses > 0 && _Death == false){
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             if (horizontalInput == 0 && _uniqueJarBreak == false){
@@ -149,8 +155,10 @@ public class Health : MonoBehaviour
                 _animator.SetTrigger("HealWalkBreak");
                 _uniqueJarBreak = false;
             }
-           
+          
         }
+        
+         
     }
 
     public void Healed()

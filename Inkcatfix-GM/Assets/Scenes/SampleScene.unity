@@ -3022,6 +3022,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 818519034, guid: 63fc4ceac5a52a444b5ccd04c42b5fde, type: 3}
     - target: {fileID: 1970739397, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
+      propertyPath: barraTinta
+      value: 
+      objectReference: {fileID: 1280062713}
+    - target: {fileID: 1970739397, guid: 788df0ae17f630f4589737e92e0e8ce3, type: 3}
       propertyPath: emptyHeart
       value: 
       objectReference: {fileID: -729769605, guid: ec05260e69afd1449849efefad522fd5, type: 3}
@@ -3870,6 +3874,7 @@ GameObject:
   - component: {fileID: 1280062714}
   - component: {fileID: 1280062716}
   - component: {fileID: 1280062715}
+  - component: {fileID: 1280062717}
   m_Layer: 5
   m_Name: Barratinta
   m_TagString: Untagged
@@ -3935,6 +3940,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280062713}
   m_CullTransparentMesh: 1
+--- !u!95 &1280062717
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280062713}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1663b6c311b13b04cb5389343a3d1e8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1319225380
 GameObject:
   m_ObjectHideFlags: 0
