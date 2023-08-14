@@ -11,7 +11,9 @@ public class Power : MonoBehaviour
 
     public GameObject _Player;
 
-    Player player;
+    private Player player;
+
+    private AbilitySelection _abilitySelection;
 
     private int _maxPower=11, _currentPower, _numbullets = 2;
 
@@ -19,10 +21,13 @@ public class Power : MonoBehaviour
     
     void Awake()
     {
+        _abilitySelection = new AbilitySelection();
         player = _Player.GetComponent<Player>();
     }
 
-    
+    public AbilitySelection getAbility(){
+        return _abilitySelection;
+    }
     void Update()
     {
         if(Time.timeScale!=0 && Health._Death == false){
@@ -54,7 +59,7 @@ public class Power : MonoBehaviour
                 player.ActivateSpecialShoot();
                 
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2) && _currentPower>3){
+            if (Input.GetKeyDown(KeyCode.Alpha2) && _currentPower>3 && _abilitySelection.isSkillUnlocked(AbilitySelection.SkillType.MultipleShoot) == true){
                 _currentPower= _currentPower-4; 
                 player.ActivateMultipleShoots(_numbullets);
                 
@@ -66,7 +71,8 @@ public class Power : MonoBehaviour
             }
         }
     }
-    void SpecialShootTrimode(){
-
+    public bool MultipleShoot()
+    {
+        return _abilitySelection.isSkillUnlocked(AbilitySelection.SkillType.MultipleShoot);
     }
 }

@@ -2,28 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbilitySelection : MonoBehaviour
+public class AbilitySelection 
 {
-     public delegate void AbilityDelegate();
-
-    // Evento que se dispara cuando se activa una habilidad
-    public event AbilityDelegate OnAbilityActivated;
-
-    // Método de una habilidad
-    public void ActivateAbility()
+    public enum SkillType
     {
-        if (OnAbilityActivated != null)
-        {
-            OnAbilityActivated();
-        }
+        MultipleShoot,
+    } 
+    
+    private List<SkillType> unlockedSkillTypeList;
+
+    public AbilitySelection() 
+    {
+        unlockedSkillTypeList = new List<SkillType>();
     }
 
-    private void SetSpace1()
+    public void UnlockSkill(SkillType skillType)
     {
-        // Llamar al evento al presionar la tecla "A"
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            ActivateAbility();
-        }
-    }    
+        unlockedSkillTypeList.Add(skillType);
+    }
+
+    public bool isSkillUnlocked(SkillType skillType)
+    {
+        return unlockedSkillTypeList.Contains(skillType);
+    }
 }

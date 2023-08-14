@@ -101,6 +101,7 @@ public class Health : MonoBehaviour
                 _lowHealth = true;
                 StartCoroutine(LowHealth());
             if (health <= -1){
+                StartCoroutine(Damaged());
                _animator.SetTrigger("Death");
                _heart.SetActive(false);
                _heartBreak.SetActive(true);
