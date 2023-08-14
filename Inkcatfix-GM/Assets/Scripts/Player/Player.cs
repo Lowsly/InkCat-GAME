@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
 	// Attack
 
 	private bool _isAttacking;
-	private float _cdShoot = 1f, _shootDelay = 0.5f,_cdHeal = 1f,_HealDelay = 0.6f;
+	private float _cdShoot = 1f, _shootDelay = 0.5f,_cdHeal = 1f,_HealDelay = 0.9f;
 	private bool _attackRight = true;
 	private bool _attackUp;
 	private bool _attackHorizontal;
@@ -160,7 +160,7 @@ public class Player : MonoBehaviour
 				}
 			
 			}
-			if (_isGrounded == true && Input.GetButton("Fire1") == false && Input.GetButton("Fire2") == true && _stunned == false && Time.time > _cdHeal)  
+			if (_isGrounded == true && Input.GetButton("Fire1") == false && Input.GetButton("Fire2") == true && Time.time > _cdHeal)  
 			{
 				_cdHeal = _HealDelay + Time.time;			
 				health.Heal();

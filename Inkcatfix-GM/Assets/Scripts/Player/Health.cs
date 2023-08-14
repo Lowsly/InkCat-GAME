@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
 
     public Image hearts, Ink;
 
-    public Sprite Ink5Uses, Ink45Uses, Ink4Uses, Ink35Uses, Ink3Uses, Ink2Uses, Ink1Uses,InkBroken0,InkBroken05, InkBroken1, InkBroken15, InkBroken2,OneHeart, fullBar, mediumBar, emptyBar;
+    public Sprite OneHeart, fullBar, mediumBar, emptyBar;
 
     private Animator _animator, _barraAnimator;
 
@@ -72,41 +72,16 @@ public class Health : MonoBehaviour
                 _uniqueJarBreak = false;
             }
             if(_inkUses < 1){
-                Ink.sprite = InkBroken0;
-                
                 _noJar = true;
-                 _barraAnimator.SetInteger("State", _inkUses+10);
+                _barraAnimator.SetInteger("State", _inkUses+10);
             }
-            if(_inkUses == 1){
-                Ink.sprite = Ink1Uses;
-            }
-            if(_inkUses == 2){
-                Ink.sprite = Ink2Uses;
-            }
-            if(_inkUses == 3){
-                Ink.sprite = Ink3Uses;
-            }
-            if(_inkUses == 4){
-                Ink.sprite = Ink4Uses;
-            }
-            if(_inkUses == 5){
-                Ink.sprite = Ink5Uses;
-            }
+            
         }
         if (_noJar == true) {
              _barraAnimator.SetInteger("State", _inkUses+10);
             _maxInk = 2;
             if (_inkUses > 2){
                 _inkUses = 2;
-            }
-            if(_inkUses == 2){
-                Ink.sprite = InkBroken2;
-            }
-             if(_inkUses == 1){
-                Ink.sprite = InkBroken1;
-            }
-            if(_inkUses == 0){
-                Ink.sprite = InkBroken0;
             }
         }
          
@@ -117,7 +92,7 @@ public class Health : MonoBehaviour
         
         if (_Immune == false){
             StartCoroutine(Immune());
-            health = health - 1;
+            health -= 1;
             if(health>0)
                 StartCoroutine(HeartColor());
             if(health>-1)
@@ -126,7 +101,6 @@ public class Health : MonoBehaviour
                 _lowHealth = true;
                 StartCoroutine(LowHealth());
             if (health <= -1){
-                Debug.Log("Sht");
                _animator.SetTrigger("Death");
                _heart.SetActive(false);
                _heartBreak.SetActive(true);
@@ -163,16 +137,20 @@ public class Health : MonoBehaviour
 
     public void Healed()
     {
-        _lowHealth = false;
-        health = health + 1;
-        _inkUses = _inkUses -1;   
-        if (health > 3){
-            health = 3;
+        if(Player._stunned == false)
+        {
+            _lowHealth = false;
+            health += 1;
+            _inkUses -=1;   
+            if (health > 3)
+            {
+                health = 3;
+            }
         }
     }
     public void InkUsed(){
         if (_inkUses < _maxInk){
-            _inkUses = _inkUses + 1;
+            _inkUses += 1;
         }
         if (_inkUses > _maxInk) {
             _inkUses = _maxInk;
