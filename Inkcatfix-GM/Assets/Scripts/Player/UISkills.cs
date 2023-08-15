@@ -14,5 +14,7 @@ public class UISkills : MonoBehaviour
    public void Clic()
    {
         abilitySelection.UnlockSkill(AbilitySelection.SkillType.MultipleShoot);
+        abilitySelection.UnlockSkill(AbilitySelection.SkillType.ScatterShot);
+        abilitySelection.UnlockSkill(AbilitySelection.SkillType.SpecialShoot);
    }
 }   

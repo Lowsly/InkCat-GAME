@@ -7,18 +7,21 @@ public class AbilitySelection
     public enum SkillType
     {
         MultipleShoot,
+        ScatterShot,
+        SpecialShoot,
     } 
     
     private List<SkillType> unlockedSkillTypeList;
 
     public AbilitySelection() 
-    {
+    {   
         unlockedSkillTypeList = new List<SkillType>();
     }
 
     public void UnlockSkill(SkillType skillType)
-    {
-        unlockedSkillTypeList.Add(skillType);
+    {   
+        if(!isSkillUnlocked(skillType))
+            unlockedSkillTypeList.Add(skillType);
     }
 
     public bool isSkillUnlocked(SkillType skillType)

@@ -45,7 +45,7 @@ public class UIManager : MonoBehaviour
             {
                 if (!_abilitySelection)
                 {
-                    Abilities(false);
+                    Abilities(true);
                 }
             }
             else
@@ -88,7 +88,7 @@ public class UIManager : MonoBehaviour
         {
             _paused = false;
             _pauseScreen.SetActive(false);
-            OpenAbilitiesMenu(false);
+            
         }
     }
 

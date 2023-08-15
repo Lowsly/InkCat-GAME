@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class AbilitySet1 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public int _buttonNumber;
+    [SerializeField] GameObject ability;
+
+    [SerializeField] AbilitiesInfo abilitiesInfo;
+    
+    public Image sprite;
+    private Sprite abilityImage;
+    void Awake(){
+       
+       
+    }
+    public void Onclic(){
+        abilitiesInfo.ButtonAsiggned(this);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Info(Sprite Abilityimage){
+        sprite.sprite = Abilityimage;
     }
 }
