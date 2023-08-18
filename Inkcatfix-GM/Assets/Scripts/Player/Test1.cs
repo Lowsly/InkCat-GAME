@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Test1 : MonoBehaviour
@@ -7,12 +8,14 @@ public class Test1 : MonoBehaviour
    [SerializeField]  Power power;
    [SerializeField]  UISkills UIskills;
    [SerializeField]  AbilitiesInfo abilitiesInfo;
-   public  AbilitySet1 button;
-
+    public GameObject button1;
+    public AbilitySet1[] abilitybutton;
     private int _button;
-    public void ButtonAsiggned(int number, AbilitySet1 buttonObject){
-        _button = number;
-        button = buttonObject;
+
+    private bool possible;
+    public void ButtonAsiggned( GameObject buttonObject){
+        
+        button1 = buttonObject;
     }
     void Start()
     {
@@ -20,5 +23,13 @@ public class Test1 : MonoBehaviour
     
     }
 
-   
+    public bool IsUniqueAbility(int Abinum) {
+    for (int i = 0; i < abilitybutton.Length; i++) {
+        if (Abinum == abilitybutton[i]._abilityNumber) {
+            return false; 
+        }
+    }
+    
+    return true; 
+    }  
 }

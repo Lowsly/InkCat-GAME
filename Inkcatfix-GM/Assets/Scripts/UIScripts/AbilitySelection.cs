@@ -1,7 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-
 public class AbilitySelection 
 {
     public enum SkillType
@@ -27,5 +24,32 @@ public class AbilitySelection
     public bool isSkillUnlocked(SkillType skillType)
     {
         return unlockedSkillTypeList.Contains(skillType);
+    }
+}
+public class SelectedAbilities 
+{
+    public enum SkillName
+    {
+        MultipleShoot,
+        ScatterShot,
+        SpecialShoot,
+    } 
+    
+    private List<SkillName> skillnameList;
+
+    public SelectedAbilities() 
+    {   
+        skillnameList = new List<SkillName>();
+    }
+
+    public void UnlockSkill(SkillName skillname)
+    {   
+        if(!isSkillPresent(skillname))
+            skillnameList.Add(skillname);
+    }
+
+    public bool isSkillPresent(SkillName skillname)
+    {
+        return skillnameList.Contains(skillname);
     }
 }
