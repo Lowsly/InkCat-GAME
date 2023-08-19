@@ -12,6 +12,7 @@ public class AbilitiesInfo : MonoBehaviour
 
      [SerializeField] Test1 test1;
 
+     public float cooldown;
 
      [SerializeField] int _numAbility;
 
@@ -19,9 +20,9 @@ public class AbilitiesInfo : MonoBehaviour
 
         button1 = test1.button1;
         AbilitySet1 abilitySet1 = button1.GetComponent<AbilitySet1>();
-        if(test1.IsUniqueAbility(_numAbility)){
-            abilitySet1.Ability(this, _numAbility);
-            abilitySet1.Info(abilityIcon);
-        } 
+        test1.IsUniqueAbility(_numAbility, abilityIcon, cooldown);
+        
+        
+        
     }
 }

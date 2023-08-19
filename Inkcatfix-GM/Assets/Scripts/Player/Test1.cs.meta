@@ -3,7 +3,11 @@ guid: 4907bfd7dccb84a43976d4070b0ad29a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - power: {instanceID: 0}
+  - UIskills: {instanceID: 0}
+  - abilitiesInfo: {instanceID: 0}
+  - button1: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

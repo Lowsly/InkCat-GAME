@@ -215,7 +215,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityIcon: {fileID: 1086171041, guid: 965dd155efdcbb84ea61f512ba4c6c28, type: 3}
   test1: {fileID: 1007114449}
-  _numAbility: 1
+  cooldown: 0
+  _numAbility: 2
 --- !u!114 &66655443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,7 +506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1393090691, guid: 965dd155efdcbb84ea61f512ba4c6c28, type: 3}
+  m_Sprite: {fileID: 21300000, guid: caba94ff3dc85be4584129e7c36671c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -542,7 +543,9 @@ MonoBehaviour:
   - {fileID: 1692438618}
   sprite: {fileID: 128257084}
   test1: {fileID: 1007114449}
-  _abilityNumber: -1
+  _abilityNumber: -3
+  buttonNumber: 2
+  cooldown: 0
 --- !u!1 &211121128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &464211070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2304,7 +2307,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1086171041, guid: 965dd155efdcbb84ea61f512ba4c6c28, type: 3}
+  m_Sprite: {fileID: 21300000, guid: caba94ff3dc85be4584129e7c36671c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2341,7 +2344,9 @@ MonoBehaviour:
   - {fileID: 1692438618}
   sprite: {fileID: 669623433}
   test1: {fileID: 1007114449}
-  _abilityNumber: -1
+  _abilityNumber: -2
+  buttonNumber: 1
+  cooldown: 0
 --- !u!1 &671043935
 GameObject:
   m_ObjectHideFlags: 0
@@ -3254,7 +3259,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: {fileID: 1970739392}
   UIskills: {fileID: 919712716}
-  abilitiesInfo: {fileID: 0}
   button1: {fileID: 0}
   abilitybutton:
   - {fileID: 1418879020}
@@ -5944,7 +5948,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1301596257, guid: 965dd155efdcbb84ea61f512ba4c6c28, type: 3}
+  m_Sprite: {fileID: 21300000, guid: caba94ff3dc85be4584129e7c36671c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5982,6 +5986,8 @@ MonoBehaviour:
   sprite: {fileID: 1418879018}
   test1: {fileID: 1007114449}
   _abilityNumber: -1
+  buttonNumber: 0
+  cooldown: 0
 --- !u!1 &1476859640
 GameObject:
   m_ObjectHideFlags: 0
@@ -6419,7 +6425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityIcon: {fileID: -431756820, guid: 965dd155efdcbb84ea61f512ba4c6c28, type: 3}
   test1: {fileID: 1007114449}
-  _numAbility: 0
+  cooldown: 0
+  _numAbility: 1
 --- !u!1 &1556923196
 GameObject:
   m_ObjectHideFlags: 0
@@ -7299,7 +7306,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityIcon: {fileID: -1393090691, guid: 965dd155efdcbb84ea61f512ba4c6c28, type: 3}
   test1: {fileID: 1007114449}
-  _numAbility: 2
+  cooldown: 0
+  _numAbility: 3
 --- !u!114 &1692438619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7956,7 +7964,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1301596257, guid: 965dd155efdcbb84ea61f512ba4c6c28, type: 3}
+  m_Sprite: {fileID: 21300000, guid: caba94ff3dc85be4584129e7c36671c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7993,7 +8001,9 @@ MonoBehaviour:
   - {fileID: 1692438618}
   sprite: {fileID: 1897870999}
   test1: {fileID: 1007114449}
-  _abilityNumber: -1
+  _abilityNumber: -4
+  buttonNumber: 3
+  cooldown: 0
 --- !u!1 &1938803835
 GameObject:
   m_ObjectHideFlags: 0
