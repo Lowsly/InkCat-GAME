@@ -14,13 +14,13 @@ public class AbilitiesInfo : MonoBehaviour
 
      public float cooldown;
 
-     [SerializeField] int _numAbility;
+     [SerializeField] int _numAbility, _abilityCost;
 
     public void AssignAbility(){
 
         button1 = test1.button1;
         AbilitySet1 abilitySet1 = button1.GetComponent<AbilitySet1>();
-        test1.IsUniqueAbility(_numAbility, abilityIcon, cooldown);
+        test1.IsUniqueAbility(_numAbility, abilityIcon, cooldown, _abilityCost);
         
         
         

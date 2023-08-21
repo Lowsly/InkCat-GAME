@@ -15,7 +15,7 @@ public class AbilitySet1 : MonoBehaviour
 
     public Test1 test1;
 
-    public int _abilityNumber, buttonNumber;
+    public int _abilityNumber, buttonNumber, cost;
 
     public float cooldown;
 
@@ -27,12 +27,13 @@ public class AbilitySet1 : MonoBehaviour
         test1.ButtonAsiggned(ability,buttonNumber);
     }
 
-    public void Ability(int Abnumber, Sprite icon, float cooldown)
+    public void Ability(int Abnumber, Sprite icon, float cooldown, int cost)
     {
         _abilityNumber = Abnumber;
         image = icon;
         this.cooldown = cooldown;
         sprite.sprite = image;
+        this.cost = cost;
         
     }
 }
