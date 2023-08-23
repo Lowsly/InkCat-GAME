@@ -7,11 +7,11 @@ using UnityEngine.UI;
 
 public class Power : MonoBehaviour
 {
-    public Image powerBar, CD1;
+    public Image powerBar;
 
-    public Image[] CDGraph;
+    public Image[] CDGraph, useGraph, abilities;
 
-    public Sprite[] powerBarSprite, abilityIcons;
+    public Sprite[] powerBarSprite;
 
     public GameObject _Player;
 
@@ -25,7 +25,11 @@ public class Power : MonoBehaviour
 
     public int[] _button, _requieredPower;
 
-    public float[] _cooldown, _AbilityDelay,currentValue; 
+    public float[] _cooldown, _AbilityDelay,currentValue;
+
+    private int _buttonNum; 
+
+    public bool[] _Ability;
 
     
     
@@ -63,73 +67,73 @@ public class Power : MonoBehaviour
                 if(_currentPower<0){
                         _currentPower = 0;
                     }
-            if (Input.GetKeyDown(KeyCode.Alpha1) && _currentPower>_requieredPower[0] && Time.time >_AbilityDelay[0]){
+            if (Input.GetKeyDown(KeyCode.Alpha1) && _currentPower>_requieredPower[0] && _Ability[0] == false &&_button[0]>0){
+                _Ability[0] = true;
                 _currentPower-=_requieredPower[0]; 
-                _AbilityDelay[0] = _cooldown[0] + Time.time;
-                if(_button[0]>0)
-                {
-                    StartCoroutine(Graph1());
-                }
-                
+                StartCoroutine(Graph2(0));
                 switch (_button[0]){
                     case 1:
-                        player.ActivateScatterShot();
+                        StartCoroutine(player.ScatterShot(0));
                     break;
                     case 2:
-                        player.ActivateMultipleShoots(_numbullets);
+                        StartCoroutine(player.MultipleShoot(_numbullets, 0));
                     break;
                     case 3:
-                        player.ActivateSpecialShoot();
+                        StartCoroutine(player.SpecialShoot(0));
                     break;
             
                 }
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2) && _currentPower>_requieredPower[1]){
-                 _currentPower-=_requieredPower[1]; 
+            if (Input.GetKeyDown(KeyCode.Alpha2) && _currentPower>_requieredPower[1] && _Ability[1] == false &&_button[1]>0){
+                _Ability[1] = true;
+                _currentPower-=_requieredPower[1]; 
+                StartCoroutine(Graph2(1));
                 switch (_button[1]){
                     case 1:
-                        player.ActivateScatterShot();
+                        StartCoroutine(player.ScatterShot(1));
                     break;
                     case 2:
-                        player.ActivateMultipleShoots(_numbullets);
+                        StartCoroutine(player.MultipleShoot(_numbullets, 1));
                     break;
                     case 3:
-                        player.ActivateSpecialShoot();
+                        StartCoroutine(player.SpecialShoot(1));
                     break;
-                }  
+            
+                }
             }
-            if (Input.GetKeyDown(KeyCode.Alpha3) && _currentPower>_requieredPower[2]){
+            if (Input.GetKeyDown(KeyCode.Alpha3) && _currentPower>_requieredPower[2] && _Ability[2] == false &&_button[2]>0){
+                _Ability[2] = true;
                 _currentPower-=_requieredPower[2]; 
+                StartCoroutine(Graph2(2));
                 switch (_button[2]){
                     case 1:
-                        player.ActivateScatterShot();
+                        StartCoroutine(player.ScatterShot(2));
                     break;
                     case 2:
-                        player.ActivateMultipleShoots(_numbullets);
+                        StartCoroutine(player.MultipleShoot(_numbullets, 2));
                     break;
                     case 3:
-                        player.ActivateSpecialShoot();
+                        StartCoroutine(player.SpecialShoot(2));
                     break;
+            
                 }
             }
-             if (Input.GetKeyDown(KeyCode.Alpha4) && _currentPower>_requieredPower[3]){
+            if (Input.GetKeyDown(KeyCode.Alpha4) && _currentPower>_requieredPower[3] && _Ability[3] == false &&_button[3]>0){
+                _Ability[3] = true;
                 _currentPower-=_requieredPower[3]; 
+                StartCoroutine(Graph2(3));
                 switch (_button[3]){
                     case 1:
-                        player.ActivateScatterShot();
+                        StartCoroutine(player.ScatterShot(3));
                     break;
                     case 2:
-                        player.ActivateMultipleShoots(_numbullets);
+                        StartCoroutine(player.MultipleShoot(_numbullets, 3));
                     break;
                     case 3:
-                        player.ActivateSpecialShoot();
+                        StartCoroutine(player.SpecialShoot(3));
                     break;
+            
                 }
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha9) && _currentPower>4 ){
-                _currentPower-=5; 
-                player.ActivateScatterShot();
-                
             }
             //&& _abilitySelection.isSkillUnlocked(AbilitySelection.SkillType.ScatterShot)
         }
@@ -139,22 +143,39 @@ public class Power : MonoBehaviour
         _button[button] = ability;
         _cooldown[button] = cool;
         _requieredPower[button] = cost;
+        _buttonNum = button;
     }
-    public IEnumerator Graph1(){
-      
-        CDGraph[0].fillAmount = 1;
-        float _currentCooldownTimer = _cooldown[0]; 
 
+    public IEnumerator Graph1(int num){   
+        _Ability[num] = true;
+        CDGraph[num].fillAmount = 1;
+        float _currentCooldownTimer = _cooldown[num]; 
+        abilities[num].color = new  Color(0.796f, 0.796f, 0.796f);
         while (_currentCooldownTimer > 0)
         {
-            float fillValue = _currentCooldownTimer / _cooldown[0]; 
-            CDGraph[0].fillAmount = fillValue;
+            float fillValue = _currentCooldownTimer / _cooldown[num]; 
+            CDGraph[num].fillAmount = fillValue;
             
             _currentCooldownTimer -= Time.deltaTime; 
             yield return null; 
         }
-
-        CDGraph[0].fillAmount = 0;
+        _Ability[num] = false;
+        abilities[num].color = Color.white;
+        CDGraph[num].fillAmount = 0;
     }
+        public IEnumerator Graph2(int num){
+      
+        useGraph[num].fillAmount = 1;
+        float _currentCooldownTimer = 10; 
 
+        while (_currentCooldownTimer > 0)
+        {
+            float fillValue = _currentCooldownTimer /10; 
+            useGraph[num].fillAmount = fillValue;
+            
+            _currentCooldownTimer -= Time.deltaTime; 
+            yield return null; 
+        }
+        useGraph[num].fillAmount = 0;
+    }
 }

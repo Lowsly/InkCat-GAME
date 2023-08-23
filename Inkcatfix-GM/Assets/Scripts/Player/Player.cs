@@ -49,12 +49,13 @@ public class Player : MonoBehaviour
 
 	public static bool _stunned;
 
+
 	//facing
 	float dirX, dirXx;
 
 	Vector3 localScale;
 
-
+	[SerializeField] Power power;
 
 	private Vector2 mousePos;
 	void Awake()
@@ -239,7 +240,7 @@ public class Player : MonoBehaviour
 			_animator.SetTrigger("Stunned");
 			
 			if(Health.health>-1){
-				_rigidbody.velocity = new Vector2((-1*dirX*dirXx)/1.45f, _rigidbody.velocity.y);
+				_rigidbody.velocity = new Vector2(-1*dirX*dirXx/1.45f, _rigidbody.velocity.y);
 			}
 			
 			_stunned = true;
@@ -368,33 +369,26 @@ public class Player : MonoBehaviour
 			}
 		}
 	}
-
-	public void ActivateSpecialShoot(){
-		StartCoroutine(SpecialShoot());
-	}
-	public IEnumerator SpecialShoot(){
+	public IEnumerator SpecialShoot(int num){
 		_specialShoot = true;
 		yield return new WaitForSeconds(10);
 		_specialShoot = false;
+		StartCoroutine(power.Graph1(num));
 
 	}
-	public void ActivateMultipleShoots(int _numbullets){
+	public IEnumerator MultipleShoot(int _numbullets, int num){
 		_bullets = _numbullets;
-		StartCoroutine(MultipleShoot());
-	}
-	public IEnumerator MultipleShoot(){
 		yield return new WaitForSeconds(10);
 		_bullets = 1;
+		StartCoroutine(power.Graph1(num));
 
 	}
 
-	public void ActivateScatterShot(){
+	public IEnumerator ScatterShot(int num){
 		bulletPrefab = scatterPrefab;
-		StartCoroutine(ScatterShot());
-	}
-	public IEnumerator ScatterShot(){
 		yield return new WaitForSeconds(10);
 		bulletPrefab = defaultBullet;
+		StartCoroutine(power.Graph1(num));
 
 	}
 	
