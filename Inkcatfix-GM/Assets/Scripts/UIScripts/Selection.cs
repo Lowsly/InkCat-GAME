@@ -24,19 +24,16 @@ public class Selection : MonoBehaviour
     else if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         ChangePosition(1);
 
-        if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.E))
+        if(Input.GetButtonDown("Jump") || Input.GetButtonDown("Submit"))
             Interact();
 }
 
     private void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.E))
-            {
                 audioSource.clip = interactSound;
                 audioSource.Play();
                 
                 options[currentPosition].GetComponent<Button>().onClick.Invoke();
-            }
             
     }
 
